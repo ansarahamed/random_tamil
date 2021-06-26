@@ -1,0 +1,95 @@
+<html>
+<head>
+<meta/>
+<title>Tamil Noorul Huq</title>
+</head>
+<style>
+</style>
+<body>
+
+<h1 style="color:blue">Tamil words</h1>
+<div style="color:green;font-size:300%;border-style:dotted" id='printletters'>This is a paragraph.</div>
+<script language = "javascript" type = "text/javascript">
+let firstposletters = [
+'க',
+'ங', 
+'ச', 
+'ஞ', 
+'ட', 
+'ண', 
+'த', 
+'ந', 
+'ப', 
+'ம', 
+'ய', 
+'ர', 
+'ல', 
+'வ', 
+'ழ', 
+'ள', 
+'ற', 
+'ன',
+'கா',   
+ 'ஙா',     
+ 'சா',    
+ 'ஞா',    
+ 'டா',    
+ 'ணா',    
+ 'தா',    
+ 'நா',    
+ 'பா',    
+ 'மா',   
+ 'யா',    
+ 'ரா',    
+ 'லா',    
+ 'வா',    
+ 'ழா',   
+ 'ளா',    
+ 'றா',   
+ 'னா'   
+
+]
+let secondposletters = [
+    'க்',
+'ங்',     
+'ச்',     
+'ஞ்',     
+'ட்',     
+'ண்',     
+'த்',     
+'ந்',     
+'ப்',     
+'ம்',     
+'ய்',     
+'ர்',    
+'ல்',     
+'வ்',     
+'ழ்',     
+'ள்',     
+'ற்',    
+'ன்'   
+]
+let randomnumber;
+let randomletters;
+let prevrandomletters;
+let printarray = []
+for(let i = 1; i <= 10;){
+    randomnumber_1 = Math.floor(Math.random() * firstposletters.length);
+    randomnumber_2 = Math.floor(Math.random() * secondposletters.length);
+    randomletters = firstposletters[randomnumber_1] +secondposletters[randomnumber_2]
+    if(randomletters != prevrandomletters){
+        printarray.push(randomletters)
+        prevrandomletters = randomletters
+        i++
+    }
+    
+}
+let hindi_1 = 'आ'
+let hindi_2 = 'ई'
+let hindi_3 = 'ए'
+printarray.push(hindi_1+hindi_2+hindi_3)
+printletters = printarray.join('<br><br>');
+document.getElementById('printletters').innerHTML = printletters
+</script>
+</body>
+</html>
